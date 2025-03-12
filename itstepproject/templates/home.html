@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">JobFinder</div>
+                <ul class="nav-links">
+                <a href="{% url 'home_page' %}">Домой</a>
+                <a href="{% url 'about_page' %}">О нас</a>
+                <a href="{% url 'contact_page' %}">Связаться с нами</a>
+                <a href="{% url 'vacancy_list'%}">Вакансии</a>
+                </ul>
+                <a href="#" class="btn-login">Войти</a>
+            </nav>
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Найди свою <span>работу мечты</span></h1>
+                    <p>Тысячи вакансий ждут тебя. Начни поиск прямо сейчас!</p>
+                    <form class="search-form">
+                        <input type="text" placeholder="Должность, ключевые слова">
+                        <input type="text" placeholder="Город">
+                        <button type="submit"><a href="{% url 'vacancy_list'%}">Найти вакансии</a></button>
+                    </form>
+                </div>
+                <div class="hero-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-OfjrLvih1vAoBqwxwtsI_GKry0anyLVRkRlEQFZllB0kKccgZ0_ML3R3gD9l9mqeMpQ&usqp=CAU" alt="Работа мечты">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <h2>Почему выбирают нас?</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/68/68991.png" alt="Иконка">
+                    </div>
+                    <h3>Широкий выбор</h3>
+                    <p>Тысячи вакансий от ведущих компаний.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/68/68991.png" alt="Иконка">
+                    </div>
+                    <h3>Простота поиска</h3>
+                    <p>Удобный и интуитивно понятный интерфейс.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/68/68991.png" alt="Иконка">
+                    </div>
+                    <h3>Быстрый отклик</h3>
+                    <p>Мгновенная связь с работодателями.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="job-categories">
+        <div class="container">
+            <h2>Популярные категории</h2>
+            <div class="categories-grid">
+                <div class="category-item">
+                    <img src="https://cdnn21.img.ria.ru/images/148666/50/1486665008_0:0:5244:2949_650x0_80_0_0_007ed2555ddf289053d70a1577a6824e.jpg" alt="IT">
+                    <div class="overlay">
+                        <h3>IT & Технологии</h3>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <img src="https://www.calltouch.ru/upload/medialibrary/d22/d22f6fabce6ab1bb83ced8ea318a4392.jpg" alt="Маркетинг">
+                    <div class="overlay">
+                        <h3>Маркетинг</h3>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <img src="https://avatars.dzeninfra.ru/get-zen_doc/3606239/pub_6371e2fbd791a47648071e33_6371e347e97d274a7d0e3714/scale_1200" alt="Финансы">
+                    <div class="overlay">
+                        <h3>Финансы</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>Отзывы наших пользователей</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-item">
+                    <img src="https://st25.styapokupayu.ru/images/blog_posts/covers/000/300/022_large.png?1658306515" alt="Пользователь">
+                    <p>"JobFinder помог мне найти работу мечты за считанные дни!"</p>
+                    <span>— Иван Петров</span>
+                </div>
+                <div class="testimonial-item">
+                    <img src="https://img.freepik.com/free-photo/portrait-middle-aged-blonde-rich-woman-with-champagne-glass-banknotes_23-2149668319.jpg" alt="Пользователь">
+                    <p>"Очень удобный интерфейс и быстрый отклик от работодателей."</p>
+                    <span>— Мария Иванова</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>О нас</h3>
+                    <p>JobFinder — это платформа для поиска работы, которая помогает найти идеальную вакансию.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>Email: info@jobfinder.com</p>
+                    <p>Телефон: +7 (123) 456-7890</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Соцсети</h3>
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 JobFinder. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</html>
